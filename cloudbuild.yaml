@@ -1,0 +1,54 @@
+steps:
+
+- id: 'checking substitutions values'
+  name: 'gcr.io/cloud-builders/docker'
+  entrypoint: bash
+  args:
+  - '-c'
+  - |
+    echo 'AR name' ${_AR_NAME} 
+    echo 'MY REPO name' ${_MY_REPO} 
+    echo 'MY IMAGE name' ${_MY_IMAGE} 
+
+
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: ['-c', 'docker pull ${_AR_NAME}/$PROJECT_ID/${_MY_REPO}/${_MY_IMAGE}:latest || exit 0']
+
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', '${_AR_NAME}/$PROJECT_ID/${_MY_REPO}/${_MY_IMAGE}', 
+       '--cache-from',  '${_AR_NAME}/$PROJECT_ID/${_MY_REPO}/${_MY_IMAGE}' , '.' ]
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=asia-south1-b'
+  - 'CLOUDSDK_COMPUTE_REGION=asia-south1'
+
+substitutions:
+  _AR_NAME: "asia-south1-docker.pkg.dev"
+  _MY_REPO: "my-repo-1"
+  _MY_IMAGE: "my-img-1"
+
+images:
+- '${_AR_NAME}/$PROJECT_ID/${_MY_REPO}/${_MY_IMAGE}'  
+
+
+
+options:
+    dynamic_substitutions: true
+
+# - name: 'gcr.io/cloud-builders/docker'
+#   entrypoint: 'bash'
+#   args: ['-c', 'docker pull asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1:latest || exit 0']
+
+
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: [ 'build', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1', 
+#        '--cache-from', '.' ]
+#   env:
+#   - 'CLOUDSDK_COMPUTE_ZONE=asia-south1-b'
+#   - 'CLOUDSDK_COMPUTE_REGION=asia-south1'
+
+
+# images:
+# - 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1'  
+

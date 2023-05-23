@@ -1,0 +1,94 @@
+Qwiklabs: https://googlecloud.qwiklabs.com/
+GCP Global Infrastructure Stats and Maps: https://cloud.google.com/about/locations
+Developer Cheat Sheet: https://googlecloudcheatsheet.withgoogle.com
+GCP in 4 words or less in PDF: https://github.com/priyankavergadia/google-cloud-4-words
+GCP Sketch Notes (awesome site!):https://github.com/priyankavergadia/GCPSketchnote
+Region Picker Tool for GCP: https://googlecloudplatform.github.io/region-picker/
+Cloud Run Links: https://cloud.google.com/run/docs/overview/what-is-cloud-run
+                             https://knative.dev/docs/
+
+Cloud Load Balancer Links: https://cloud.google.com/static/load-balancing/images/choose-lb.svg
+https://cloud.google.com/load-balancing/docs/load-balancing-overview
+
+PDF Whitepapers Links:
+https://cloud.google.com/docs/security/key-management-deep-dive/resources/google-cloud-kms-deep-dive.pdf
+
+           https://services.google.com/fh/files/misc/gcp_data_deletion_nda.pdf
+
+           https://cloud.google.com/static/docs/security/infrastructure/design/resources/google_infrastructure_whitepaper_fa.pdf
+
+Free SRE Google Books: https://sre.google/books/
+Google Topaz:
+https://cloud.google.com/blog/products/infrastructure/topaz-subsea-cable-connects-canada-and-asia
+
+Google Titan Chip:
+https://cloud.google.com/blog/products/identity-security/titan-in-depth-security-in-plaintext
+
+Identity-aware Proxy Explainer Video: https://m.youtube.com/watch?v=xM9-FSU5MoY
+EventArc: https://cloud.google.com/functions/docs/calling/eventarc
+Common Expression Language used in WAF, IAM, KMS:
+https://github.com/google/cel-spec
+
+ 
+ 
+
+ 
+ 
+
+roi-mb2023-devops7
+mb2023-st07
+
+export FLASK_APP=hello
+export FLASK_ENV=development
+
+
+for i in `ls`  
+do 
+	mv $i BKUP_$i 
+done
+ 
+
+Deny Policies with CEL: https://cloud.google.com/iam/docs/deny-overview
+External Key Manager: https://cloud.google.com/kms/docs/ekm
+Secret Manager: https://cloud.google.com/secret-manager
+OWASP Top 10: https://owasp.org/www-project-top-ten/
+Binary Authorization: https://cloud.google.com/binary-authorization
+GCP Compliance Offerings: https://cloud.google.com/security/compliance/offerings
+Route Trigger Cloud Audit Logs: https://cloud.google.com/eventarc/docs/targets
+https://cloud.google.com/eventarc/docs/run/route-trigger-cloud-audit-logs
+
+ 
+
+
+
+https://moonbank.roitraining.com/hsbcdevops
+
+
+
+================================================
+===============================================
+=============================================
+
+Boot Camp 10-May-2023
+
+================================================
+https://roitraining.zoom.us/meeting/register/tZUtdOmsqj0tHNwXxT_g71j8LeHG-pPBxVIU
+
+810 3044 6768
+HSBC2023
+
+
+
+
+
+
+
+us-west2-docker.pkg.dev/roi-mb2023-devops7/quickstart-docker-repo
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+# directories
+my_venv
+my-venv
+
+
+# unwanted files
+
+*pdf
+*xls
+*xlsx
+*xlsm
+*xlsb
+
+DevOps*txt
+
+
+# test files
+test.py
+test.sh
+
