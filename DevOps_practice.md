@@ -5,12 +5,17 @@
 | -----  |---- |
 
 | Reduce Org SIlos	| Share Ownership | 
+| -----  |---- |
 | Accept failure as normal	| Blamelessness | 
+| -----  |---- |
 | Implement gradual change	| Reduce cost of failure | 
+| -----  |---- |
 
 | Leverage Toooling and Automation	| 	Toil automation | 
+| -----  |---- |
 
 | Measure Everything | Measure Toil and Reliability | 
+| -----  |---- |
 
 
 
