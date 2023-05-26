@@ -3,37 +3,33 @@
 
 | DevOps | SRE |
 | -----  |---- |
-
 | Reduce Org SIlos	| Share Ownership | 
-| -----  |---- |
 | Accept failure as normal	| Blamelessness | 
-| -----  |---- |
 | Implement gradual change	| Reduce cost of failure | 
-| -----  |---- |
-
 | Leverage Toooling and Automation	| 	Toil automation | 
-| -----  |---- |
-
 | Measure Everything | Measure Toil and Reliability | 
-| -----  |---- |
 
 
+&nbsp;
+&nbsp;
 
 ### few concepts
-Blameless postmortem: Detailed documentation of an incident or outage, its root cause, its impact, actions taken to resolve it, and follow-up actions to prevent its recurrence.
+`Blameless postmortem`: Detailed documentation of an incident or outage, its root cause, its impact, actions taken to resolve it, and follow-up actions to prevent its recurrence.
 
-Reliability: The number of “good” interactions divided by the number of total interactions. This leaves you with a numerical fraction of real users who experience a service that is available and working.
+`Reliability`:` The number of “good” interactions divided by the number of total interactions. This leaves you with a numerical fraction of real users who experience a service that is available and working.
 
-Error budget: The amount of unreliability you are willing to tolerate.
+`Error budget`: The amount of unreliability you are willing to tolerate.
 
-Service level indicator (SLI): A quantifiable measure of the reliability of your service from your users' perspective.
+`Service level indicator (SLI)`: A quantifiable measure of the reliability of your service from your users' perspective.
 
-Service level objective (SLO): Sets the target for an SLI over a period of time.
-
-
+`Service level objective (SLO)`: Sets the target for an SLI over a period of time.
 
 
 
+&nbsp;
+&nbsp;
+
+  
 
 Change is best when small and frequent.
 Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
@@ -44,6 +40,9 @@ Resistance to change is usually a fear of loss.
 Present change as an opportunity, not a threat.
 People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
 
+  
+&nbsp;
+&nbsp;
 
 ### type of biases
 1. Affinity bias: Tendency to gravitate toward those who are similar to you, such as with race, gender, socioeconomic background, or education level.
@@ -51,7 +50,8 @@ People react to change in many ways, and IT leaders need to understand how to co
 3. Selective attention bias: Tendency to pay attention to things, ideas, and input from people whom you tend to gravitate toward.
 4. Labeling bias: Tendency to form opinions based on how people look, dress, or appear externally.
 
-
+&nbsp;
+&nbsp;
 ### HOw SLI should be
 1. Measure reliability with good service level indicators (SLIs).
 2. A good SLI correlates with user experience with your service; that is, a good SLI tells you when users are happy or unhappy.
@@ -62,7 +62,8 @@ People react to change in many ways, and IT leaders need to understand how to co
 
 
 
-
+&nbsp;
+&nbsp;
 ### How SRE and Dev teams can work together
 1. Kitchen Sink/”Everything SRE” team: We recommend this approach for organizations that have few applications and user journeys and where the scope is small enough that only one team is necessary, but a dedicated SRE team is needed in order to implement its practices.
 2. Infrastructure team: This type of team focuses on maintaining shared services and components related to infrastructure, versus an SRE team dedicated to working on services related to products, like customer-facing code.
@@ -72,7 +73,8 @@ People react to change in many ways, and IT leaders need to understand how to co
 6. Consulting team: This implementation is very similar to the embedded implementation, except SRE are usually less hands-on. We recommend staffing one or two part-time consultants before you staff your first SRE team.
 
 
-
+&nbsp;
+&nbsp;
 ### Developing a Google SRE Cultures
 1. Organizations with high SRE maturity have well-documented and user-centric SLOs, error budgets, blameless postmortem culture, and a low tolerance for toil.
 2. Engineers with operations experience and systems administrators with scripting experience are good first SREs to hire.
@@ -81,27 +83,39 @@ People react to change in many ways, and IT leaders need to understand how to co
 
 
 
-
+&nbsp;
+&nbsp;
 ====================================================
 ## CLoud Build help
 Cloud Build for python with auth - twine & keyrings.google-artifactregistry-auth
 
 Build with SecretManager and KMS
 
+
+&nbsp;
+&nbsp;
 =====================================================
 
 ### Moonbank project details (expired)
 
-DevOpsUser7@roimoonbank.com
+> DevOpsUser7@roimoonbank.com
 
-ROI2023dev
+> ROI2023dev
 
 WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
 
+
+&nbsp;
+&nbsp;
 =====================================================
+
+&nbsp;
+&nbsp;
 
 # Exam preparation points:
 
+&nbsp;
+&nbsp;
 ## process wise
 what should not be in postmortem - unreviewed postmortem
 
@@ -114,7 +128,8 @@ post mortem
 rolling update with partitions
 
 
-
+&nbsp;
+&nbsp;
 ## technical 
 cloud build -  non container artifacts
 
@@ -127,7 +142,8 @@ container analysis
 sink.get permission / log.configwriter
 
 
-
+&nbsp;
+&nbsp;
 ## Tools
 Cloud Profiler
 
@@ -137,4 +153,5 @@ Alert noti channels - webhook
 
 
 
-
+&nbsp;
+&nbsp;
