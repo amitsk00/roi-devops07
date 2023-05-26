@@ -1,13 +1,20 @@
 
 ## Compare
-DevOps							    SRE
-Reduce Org SIlos					Share Ownership
-Accept failure as normal				Blamelessness
-Implement gradual change				Reduce cost of failure
-Leverage Toooling and Automation		Toil automation
-Measure Everything					Measure Toil and Reliability
+
+| DevOps | SRE |
+| -----  |---- |
+
+| Reduce Org SIlos	| Share Ownership | 
+| Accept failure as normal	| Blamelessness | 
+| Implement gradual change	| Reduce cost of failure | 
+
+| Leverage Toooling and Automation	| 	Toil automation | 
+
+| Measure Everything | Measure Toil and Reliability | 
 
 
+
+### few concepts
 Blameless postmortem: Detailed documentation of an incident or outage, its root cause, its impact, actions taken to resolve it, and follow-up actions to prevent its recurrence.
 
 Reliability: The number of “good” interactions divided by the number of total interactions. This leaves you with a numerical fraction of real users who experience a service that is available and working.
@@ -40,8 +47,7 @@ People react to change in many ways, and IT leaders need to understand how to co
 4. Labeling bias: Tendency to form opinions based on how people look, dress, or appear externally.
 
 
-
-
+### HOw SLI should be
 1. Measure reliability with good service level indicators (SLIs).
 2. A good SLI correlates with user experience with your service; that is, a good SLI tells you when users are happy or unhappy.
 3. Measure toil by identifying it, selecting an appropriate unit of measure, and tracking the measurements continuously.
@@ -52,36 +58,17 @@ People react to change in many ways, and IT leaders need to understand how to co
 
 
 
-
-1. Kitchen Sink/”Everything SRE” team: We recommend this approach
-for organizations that have few applications and user journeys and
-where the scope is small enough that only one team is necessary, but
-a dedicated SRE team is needed in order to implement its practices.
-2. Infrastructure team: This type of team focuses on maintaining shared
-services and components related to infrastructure, versus an SRE
-team dedicated to working on services related to products, like
-customer-facing code.
-3. Tools team: This type of SRE team tends to focus on building
-software to help their developer counterparts measure, maintain, and
-improve system reliability or other aspects of SRE work, such as
-capacity planning.
-4. Product/Application team: This type of SRE team works to improve
-the reliability of a critical application or business area. We
-recommend this implementation for organizations that already have a
-Kitchen Sink, Infrastructure, or Tools-focused SRE team and have a
-key user-facing application with high reliability needs.
-5. Embedded team: This team has SREs embedded with their developer
-counterparts, usually one per developer team in scope. The work
-relationship between the embedded SREs and developers tends to be
-project- or time-bounded and usually very hands-on, where they
-perform work like changing code and configuration of the services in
-scope.
+### How SRE and Dev teams can work together
+1. Kitchen Sink/”Everything SRE” team: We recommend this approach for organizations that have few applications and user journeys and where the scope is small enough that only one team is necessary, but a dedicated SRE team is needed in order to implement its practices.
+2. Infrastructure team: This type of team focuses on maintaining shared services and components related to infrastructure, versus an SRE team dedicated to working on services related to products, like customer-facing code.
+3. Tools team: This type of SRE team tends to focus on building software to help their developer counterparts measure, maintain, and improve system reliability or other aspects of SRE work, such as capacity planning.
+4. Product/Application team: This type of SRE team works to improve the reliability of a critical application or business area. We recommend this implementation for organizations that already have a Kitchen Sink, Infrastructure, or Tools-focused SRE team and have a key user-facing application with high reliability needs.
+5. Embedded team: This team has SREs embedded with their developer counterparts, usually one per developer team in scope. The work relationship between the embedded SREs and developers tends to be project- or time-bounded and usually very hands-on, where they perform work like changing code and configuration of the services in scope.
 6. Consulting team: This implementation is very similar to the embedded implementation, except SRE are usually less hands-on. We recommend staffing one or two part-time consultants before you staff your first SRE team.
 
 
 
-Module 6 | Developing a Google SRE Culture
-3
+### Developing a Google SRE Cultures
 1. Organizations with high SRE maturity have well-documented and user-centric SLOs, error budgets, blameless postmortem culture, and a low tolerance for toil.
 2. Engineers with operations experience and systems administrators with scripting experience are good first SREs to hire.
 3. Upskill current team members with necessary SRE skills such as operations and software engineering, monitoring systems, production automation, system architecture, troubleshooting, culture of trust, and incident management.
@@ -93,16 +80,18 @@ Module 6 | Developing a Google SRE Culture
 ====================================================
 ## CLoud Build help
 Cloud Build for python with auth - twine & keyrings.google-artifactregistry-auth
+
 Build with SecretManager and KMS
 
 =====================================================
 
 ### Moonbank project details (expired)
- Moonbank
-aDevOpsUser7@roimoonbank.com
+
+DevOpsUser7@roimoonbank.com
+
 ROI2023dev
 
- WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
+WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
 
 =====================================================
 
@@ -110,24 +99,35 @@ ROI2023dev
 
 ## process wise
 what should not be in postmortem - unreviewed postmortem
+
 SLI - durability
+
 SRE troubleshooting
+
 post mortem
+
 rolling update with partitions
+
 
 
 ## technical 
 cloud build -  non container artifacts
+
 Build - KMS config
+
 VM scopes
+
 container analysis
+
 sink.get permission / log.configwriter
 
 
 
 ## Tools
 Cloud Profiler
+
 Cloud Trace
+
 Alert noti channels - webhook
 
 
