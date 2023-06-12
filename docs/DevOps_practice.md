@@ -147,4 +147,34 @@ Alert noti channels - webhook
 &nbsp;
 
 
+* Cloud billing user
+    * Billing Account Creator - Create new  billing accounts.
+    * Billing Account Administrator - everything
+    * Billing Account Costs Manager - Manage budgets and view and export cost information of billing accounts (but not pricing information).
+    * Billing Account Viewer - View billing account cost information and transactions.
+    * Billing Account User - Link projects to billing accounts.
+    * Project Billing Manager - Link/unlink the project to/from a billing account.
+
+Cost of Log Ingestion
+
+CSR - pull request based trigger
+
+Log export to pub-sub
+
+what goes to _Default and _Required
+* Logging
+    * _Default
+        * Data Access audit logs
+        * Policy Denied audit logs
+
+    * _Required
+        * Admin Activity audit logs
+        * System Event audit logs
+        * Access Transparency logs - when Google personal is accessing the data
+
+GitLab to Cloud Build - seems this is possible
+
+
+Org level sinks
+
 
