@@ -155,6 +155,9 @@ Alert noti channels - webhook
     * Billing Account User - Link projects to billing accounts.
     * Project Billing Manager - Link/unlink the project to/from a billing account.
 
+&nbsp;
+&nbsp;
+
 Cost of Log Ingestion
 
 CSR - pull request based trigger
@@ -177,4 +180,23 @@ GitLab to Cloud Build - seems this is possible
 
 Org level sinks
 
+
+&nbsp;
+&nbsp;
+
+
+
+# exam based
+* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
+* pricing - TCO tool - Total Cost of Operations
+* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
+* intent based capacity planning
+    * Increased agility
+    * Reduced costs
+    * Improved performance
+* dns-info -->  gcloud dns project-info describe PROJECT_ID 
+* Spinnaker with Replica Sets
+* GKE logging - can we opt out?
+* kubectl create ns ??
+* versioning on artifacts
 
