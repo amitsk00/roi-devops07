@@ -186,4 +186,12 @@ Saturation
 * Change it around.Were you incident commander last time? Take on a different role this time. Encourage every team member to acquire familiarity with each role.
 
 
+Incident Command System
+* Coordinate
+* Communicate
+* Command
+
+The OL works to respond to the incident by applying operational tools to mitigate or resolve the incident.
+
+While the IC and OL work on mitigating and resolving the incident, the CL is the public face of the incident response team. If the incident becomes small enough, the CL role can be subsumed back into the IC role.
 

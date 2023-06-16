@@ -200,3 +200,51 @@ Org level sinks
 * kubectl create ns ??
 * versioning on artifacts
 
+
+
+## Binary Authorization
+* Binary Authorization is a service on Google Cloud that provides *software supply-chain security* for container-based applications.
+*  It enables you to configure a policy that the service enforces when an attempt is made to deploy a container image on one of the supported container-based platforms.
+* Supported with
+    * GKE
+    * Run
+    * Anthos Mesh
+    * Anthos clusters
+* `Continuous Validation` (CV) is a feature of Binary Authorization that periodically checks container images associated with running Pods for continued policy conformance.
+* `Container Analysis` stores trusted metadata that is used in the authorization process.
+    * For each attestor you create, you must create one Container Analysis note. 
+    * Each attestation is stored as an occurrence of this note.
+* Binary Authorization is based on the `Kritis` specification, which is part of the `Grafeas` open source project.
+* An *attestation* certifies that a specific image has completed a previous stage
+    * ~Build verification~ in which Binary Authorization uses attestations to verify that an image was built by a specific build system or continuous integration (CI) pipeline.
+    * ~Vulnerability scanning~ where the CI-built image has also been scanned for vulnerabilities by Container Analysis.
+    * ~Manual check~ where a person, for example, a QA representative, manually creates the attestation.
+
+Binary Authorization provides:
+
+* A policy model that lets you describe the constraints under which images can be deployed
+* An attestation model that lets you define trusted authorities who can attest or verify that required processes in your environment have completed before deployment
+* A deploy-time enforcer that prevents images that violate the policy from being deployed
+
+Policies will have:
+* Deployment rules
+* List of exempt images
+
+Each Google Cloud project can have exactly one policy.
+
+three evaluation modes:
+* Allow all images: allows all images to be deployed.
+* Disallow all images: disallows all images from being deployed.
+* Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+
+Enforcement modes
+* Block and Audit Log:
+* Dry Run: Audit Log Only:
+
+Exempt images
+
+Allowlist patterns
+
+Binary Authorization supports two types of keys:
+* PKIX
+* PGP
