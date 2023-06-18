@@ -27,28 +27,21 @@ substitutions:
   _AR_NAME: "asia-south1-docker.pkg.dev"
   _MY_REPO: "my-repo-1"
   _MY_IMAGE: "my-img-1"
+  _BUCKET_NAME: "temp"
+  _MYPY_REPO: "my-py-repo-1"
+  _ARPY_NAME: "asia-south1-python.pkg.dev"
 
 images:
 - '${_AR_NAME}/$PROJECT_ID/${_MY_REPO}/${_MY_IMAGE}'  
 
+artifacts:
+  objects:
+    location: 'gs://${_BUCKET_NAME}/'
+    paths: ['app.py']
+  python_packages:
+  - repository: "https://${_ARPY_NAME}/$PROJECT_ID/${_MYPY_REPO}"
+    paths: ["*"]
 
 
 options:
     dynamic_substitutions: true
-
-# - name: 'gcr.io/cloud-builders/docker'
-#   entrypoint: 'bash'
-#   args: ['-c', 'docker pull asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1:latest || exit 0']
-
-
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: [ 'build', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1', 
-#        '--cache-from', '.' ]
-#   env:
-#   - 'CLOUDSDK_COMPUTE_ZONE=asia-south1-b'
-#   - 'CLOUDSDK_COMPUTE_REGION=asia-south1'
-
-
-# images:
-# - 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo-1/my-img-1'  
-
