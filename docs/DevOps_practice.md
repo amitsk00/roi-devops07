@@ -248,3 +248,34 @@ Allowlist patterns
 Binary Authorization supports two types of keys:
 * PKIX
 * PGP
+
+
+
+
+Which Google load balancing service can maintain the packet's source IP?
+
+Spinnaker must use GKE Replica Sets to trigger CD
+
+
+
+
+## Exam
+
+Build - 
+    * PR with approval --> PR is a trigger and Approval is added on Trigger. Person with Approval access can approve trigger
+        * Cloud Build Editor role --> run build and allows to change trigger
+        * Cloud Build Approver role --> can approve the build
+    * Bin Auth with Build as Attestor
+
+
+
+How to remove PII from logs --> Fluentd filter plugin to exclude what is needed
+ 
+
+Compare Canary with new deployment of current prod
+
+MOitoring viewer vs Dashboard viewer
+
+Incident Commander is to establish communication with the rest of the response team
+
+

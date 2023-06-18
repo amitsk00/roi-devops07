@@ -54,6 +54,12 @@ SRE do not set SLI (business and product decide), but SRE decides on SLI
  * availability - fraction of time the service is usable
  * yield - fraction of well formed requests that succeed
  * durability - likelihood that data will be retained over a long period of time
+ * Quality: The proportion of valid requests served without degrading quality
+ * Data freshness: The proportion of valid data updated more recently than a threshold
+ * Data correctness: The proportion of valid data producing correct output
+ * Coverage: The proportion of valid data processed successfully
+ * (In))Completeness — the percentage of unexpected missing data entries, can be both on the row level and column level
+
 
 
 &nbsp;
@@ -68,9 +74,9 @@ Which system needs what:
 
 | system type | which SLI needed |
 | --- | --- |
-| User-facing serving systems |  availability, latency, and throughput| 
+| User-facing serving systems |  availability, latency, and throughput , Quality| 
 | Storage systems |  latency, availability, and durability| 
-| BigData systems |  throughput and end-to-end latency| 
+| BigData systems |  throughput and end-to-end latency, freshness , correctness , coverage | 
 | All systems |  correctness| 
 
 
