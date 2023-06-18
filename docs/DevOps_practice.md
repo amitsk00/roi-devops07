@@ -119,8 +119,6 @@ WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-clo
 ## process wise
 
 
-rolling update with partitions
-
 
 &nbsp;
 &nbsp;
@@ -158,47 +156,9 @@ Alert noti channels - webhook
 &nbsp;
 &nbsp;
 
-Cost of Log Ingestion
-
-CSR - pull request based trigger
-
-Log export to pub-sub
-
-what goes to _Default and _Required
-* Logging
-    * _Default
-        * Data Access audit logs
-        * Policy Denied audit logs
-
-    * _Required
-        * Admin Activity audit logs
-        * System Event audit logs
-        * Access Transparency logs - when Google personal is accessing the data
-
-GitLab to Cloud Build - seems this is possible
-
-
-Org level sinks
-
 
 &nbsp;
 &nbsp;
-
-
-
-# exam based
-* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
-* pricing - TCO tool - Total Cost of Operations
-* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
-* intent based capacity planning
-    * Increased agility
-    * Reduced costs
-    * Improved performance
-* dns-info -->  gcloud dns project-info describe PROJECT_ID 
-* Spinnaker with Replica Sets
-* GKE logging - can we opt out?
-* kubectl create ns ??
-* versioning on artifacts
 
 
 
@@ -219,6 +179,8 @@ Org level sinks
     * ~Build verification~ in which Binary Authorization uses attestations to verify that an image was built by a specific build system or continuous integration (CI) pipeline.
     * ~Vulnerability scanning~ where the CI-built image has also been scanned for vulnerabilities by Container Analysis.
     * ~Manual check~ where a person, for example, a QA representative, manually creates the attestation.
+* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
+
 
 Binary Authorization provides:
 
@@ -252,30 +214,32 @@ Binary Authorization supports two types of keys:
 
 
 
+
+
+
+
+
+# exam based
+* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
+* 
+
+* dns-info -->  gcloud dns project-info describe PROJECT_ID 
+
+* GKE logging - can we opt out?
+
+* versioning on artifacts
+
+
+
+
 Which Google load balancing service can maintain the packet's source IP?
 
-Spinnaker must use GKE Replica Sets to trigger CD
+Partitioned Rolling Update
+
+Cost of Log Ingestion
+
+Org level sinks
 
 
-
-
-## Exam
-
-Build - 
-    * PR with approval --> PR is a trigger and Approval is added on Trigger. Person with Approval access can approve trigger
-        * Cloud Build Editor role --> run build and allows to change trigger
-        * Cloud Build Approver role --> can approve the build
-    * Bin Auth with Build as Attestor
-
-
-
-How to remove PII from logs --> Fluentd filter plugin to exclude what is needed
- 
-
-Compare Canary with new deployment of current prod
-
-MOitoring viewer vs Dashboard viewer
-
-Incident Commander is to establish communication with the rest of the response team
 
 
