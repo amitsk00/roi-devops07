@@ -31,14 +31,14 @@
 
   
 
-Change is best when small and frequent.
-Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
-Prototyping culture encourages teams to try more ideas, leading to an increase in faster failures and more successes.
-Excessive toil is toxic to the SRE role.
-By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add service features.
-Resistance to change is usually a fear of loss.
-Present change as an opportunity, not a threat.
-People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
+* Change is best when small and frequent.
+* Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
+* Prototyping culture encourages teams to try more ideas, leading to an increase in faster failures and more successes.
+* Excessive toil is toxic to the SRE role.
+By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add * service features.
+* Resistance to change is usually a fear of loss.
+* Present change as an opportunity, not a threat.
+* People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
 
   
 &nbsp;
@@ -83,13 +83,6 @@ People react to change in many ways, and IT leaders need to understand how to co
 
 
 
-&nbsp;
-&nbsp;
-====================================================
-## CLoud Build help
-Cloud Build for python with auth - twine & keyrings.google-artifactregistry-auth
-
-Build with SecretManager and KMS
 
 
 &nbsp;
@@ -105,39 +98,8 @@ Build with SecretManager and KMS
 WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
 
 
-&nbsp;
-&nbsp;
 =====================================================
 
-&nbsp;
-&nbsp;
-
-# Exam preparation points:
-
-&nbsp;
-&nbsp;
-## process wise
-
-
-
-&nbsp;
-&nbsp;
-# technical 
-
-
-VM scopes
-
-container analysis
-
-sink.get permission / log.configwriter
-
-
-&nbsp;
-&nbsp;
-## Tools
-
-
-Alert noti channels - webhook
 
 
 
@@ -188,24 +150,27 @@ Binary Authorization provides:
 * An attestation model that lets you define trusted authorities who can attest or verify that required processes in your environment have completed before deployment
 * A deploy-time enforcer that prevents images that violate the policy from being deployed
 
-Policies will have:
+
+Policies will have
 * Deployment rules
 * List of exempt images
 
 Each Google Cloud project can have exactly one policy.
 
 three evaluation modes:
-* Allow all images: allows all images to be deployed.
-* Disallow all images: disallows all images from being deployed.
-* Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+    * Allow all images: allows all images to be deployed.
+    * Disallow all images: disallows all images from being deployed.
+    * Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+
 
 Enforcement modes
-* Block and Audit Log:
-* Dry Run: Audit Log Only:
+    * Block and Audit Log:
+    * Dry Run: Audit Log Only:
 
-Exempt images
 
-Allowlist patterns
+Extra features 
+- Exempt images
+- Allowlist patterns
 
 Binary Authorization supports two types of keys:
 * PKIX
@@ -223,12 +188,9 @@ Binary Authorization supports two types of keys:
 * cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
 * 
 
-* dns-info -->  gcloud dns project-info describe PROJECT_ID 
 
-* GKE logging - can we opt out?
-
-* versioning on artifacts
-
+&nbsp;
+&nbsp;
 
 
 
@@ -236,10 +198,11 @@ Which Google load balancing service can maintain the packet's source IP?
 
 Partitioned Rolling Update
 
-Cost of Log Ingestion
-
-Org level sinks
 
 
+&nbsp;
+&nbsp;
 
 
+
+ASM details

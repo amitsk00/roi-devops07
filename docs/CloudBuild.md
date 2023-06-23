@@ -56,7 +56,7 @@ Dynamic Substitutions (one varibale to have ref to another var)
         dynamic_substitutions: true
 ```
 
-scrit tag (cannot specify args or entrypoint in the same step)
+script tag (cannot specify args or entrypoint in the same step)
 ```
     steps:
     - name: 'bash'
@@ -148,7 +148,7 @@ non container (python) artifacts
           paths: ["dist/*"]
 ```
 
-Python requirements
+~Python~ requirements
 ```
 twine
 keyrings.google-artifactregistry-auth
@@ -185,6 +185,17 @@ and
         location: 'gs://[STORAGE_LOCATION]/'
         paths: ['HelloWorld.java', 'HelloWorld.class', 'cloudbuild.yaml']
 ```
+
+CReating Triggers for CSR
+```
+    gcloud beta builds triggers create cloud-source-repositories \
+    --repo=REPO_NAME \
+    --branch-pattern=BRANCH_PATTERN \ # or --tag-pattern=TAG_PATTERN
+    --build-config=BUILD_CONFIG_FILE \
+    --service-account=SERVICE_ACCOUNT \
+    --require-approval
+```
+But to *skip* to run this trigger -  you can include `[skip ci]` or `[ci skip]` in the commit message, and a build will not be triggered.
 
 
 
@@ -375,5 +386,28 @@ steps:
 4. Using a cached Docker image
 5. Caching directories with Google Cloud Storage
 6. Avoiding the upload of unnecessary files (use .gcloudignore)
+
+
+
+### can we run cloud build across multiple projects ?
+    In SA project, iam.disableCrossProjectServiceAccountUsage should be OFF
+    In SA project, iam.serviceAccountTokenCreator role should be given to SA (on Build SAgent on BUILD Project)
+    in SA project,  Service Account User is also needed
+    In this case, logs can't be stored in default log bucket, rather use Cloud Logging (Logs Writer role needed) or user def GCS bucket
+    on Articat Registry, need role of  Artifact Registry Create-on-push Writer
+    Storage Admin on GCS
+    Storage Object Admin on GCS
+    Add SA entry in cloudbuilds.yaml
+
+    ```
+        steps:
+        - name: 'bash'
+        args: ['echo', 'Hello world!']
+        logsBucket: 'LOGS_BUCKET_LOCATION'
+        serviceAccount: 'projects/PROJECT_ID/serviceAccounts/SERVICE_ACCOUNT'
+        options:
+        logging: GCS_ONLY
+    ```
+
 
 

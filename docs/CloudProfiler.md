@@ -3,7 +3,7 @@
 
 Cloud Profiler consists of the profiling agent, which collects the data, and a console interface on Google Cloud, which lets you view and analyze the data collected by the agent.
 
-It shows data as Flame Graph
+It shows data as `Flame Graph`
 
 The profile data is retained for 30 days, so you can analyze performance data for periods up to the last 30 days. Profiles can be downloaded for long-term storage.
 
