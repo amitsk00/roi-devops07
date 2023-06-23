@@ -16,7 +16,7 @@ Cloud Trace runs on Linux in the following environments:
 Trace is made up of spans
 
 Trace wih
-* Open Telemetry (python and few other)
+* Open Telemetry (python and few other) (recommended)
 * Open Census (Go, Java, PHP)
 * Cloud Trace agent
 

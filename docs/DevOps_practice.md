@@ -31,14 +31,14 @@
 
   
 
-Change is best when small and frequent.
-Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
-Prototyping culture encourages teams to try more ideas, leading to an increase in faster failures and more successes.
-Excessive toil is toxic to the SRE role.
-By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add service features.
-Resistance to change is usually a fear of loss.
-Present change as an opportunity, not a threat.
-People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
+* Change is best when small and frequent.
+* Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
+* Prototyping culture encourages teams to try more ideas, leading to an increase in faster failures and more successes.
+* Excessive toil is toxic to the SRE role.
+By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add * service features.
+* Resistance to change is usually a fear of loss.
+* Present change as an opportunity, not a threat.
+* People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
 
   
 &nbsp;
@@ -83,13 +83,6 @@ People react to change in many ways, and IT leaders need to understand how to co
 
 
 
-&nbsp;
-&nbsp;
-====================================================
-## CLoud Build help
-Cloud Build for python with auth - twine & keyrings.google-artifactregistry-auth
-
-Build with SecretManager and KMS
 
 
 &nbsp;
@@ -105,41 +98,8 @@ Build with SecretManager and KMS
 WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
 
 
-&nbsp;
-&nbsp;
 =====================================================
 
-&nbsp;
-&nbsp;
-
-# Exam preparation points:
-
-&nbsp;
-&nbsp;
-## process wise
-
-
-rolling update with partitions
-
-
-&nbsp;
-&nbsp;
-# technical 
-
-
-VM scopes
-
-container analysis
-
-sink.get permission / log.configwriter
-
-
-&nbsp;
-&nbsp;
-## Tools
-
-
-Alert noti channels - webhook
 
 
 
@@ -158,47 +118,9 @@ Alert noti channels - webhook
 &nbsp;
 &nbsp;
 
-Cost of Log Ingestion
-
-CSR - pull request based trigger
-
-Log export to pub-sub
-
-what goes to _Default and _Required
-* Logging
-    * _Default
-        * Data Access audit logs
-        * Policy Denied audit logs
-
-    * _Required
-        * Admin Activity audit logs
-        * System Event audit logs
-        * Access Transparency logs - when Google personal is accessing the data
-
-GitLab to Cloud Build - seems this is possible
-
-
-Org level sinks
-
 
 &nbsp;
 &nbsp;
-
-
-
-# exam based
-* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
-* pricing - TCO tool - Total Cost of Operations
-* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
-* intent based capacity planning
-    * Increased agility
-    * Reduced costs
-    * Improved performance
-* dns-info -->  gcloud dns project-info describe PROJECT_ID 
-* Spinnaker with Replica Sets
-* GKE logging - can we opt out?
-* kubectl create ns ??
-* versioning on artifacts
 
 
 
@@ -219,6 +141,8 @@ Org level sinks
     * ~Build verification~ in which Binary Authorization uses attestations to verify that an image was built by a specific build system or continuous integration (CI) pipeline.
     * ~Vulnerability scanning~ where the CI-built image has also been scanned for vulnerabilities by Container Analysis.
     * ~Manual check~ where a person, for example, a QA representative, manually creates the attestation.
+* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
+
 
 Binary Authorization provides:
 
@@ -226,24 +150,27 @@ Binary Authorization provides:
 * An attestation model that lets you define trusted authorities who can attest or verify that required processes in your environment have completed before deployment
 * A deploy-time enforcer that prevents images that violate the policy from being deployed
 
-Policies will have:
+
+Policies will have
 * Deployment rules
 * List of exempt images
 
 Each Google Cloud project can have exactly one policy.
 
 three evaluation modes:
-* Allow all images: allows all images to be deployed.
-* Disallow all images: disallows all images from being deployed.
-* Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+    * Allow all images: allows all images to be deployed.
+    * Disallow all images: disallows all images from being deployed.
+    * Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+
 
 Enforcement modes
-* Block and Audit Log:
-* Dry Run: Audit Log Only:
+    * Block and Audit Log:
+    * Dry Run: Audit Log Only:
 
-Exempt images
 
-Allowlist patterns
+Extra features 
+- Exempt images
+- Allowlist patterns
 
 Binary Authorization supports two types of keys:
 * PKIX
@@ -252,30 +179,30 @@ Binary Authorization supports two types of keys:
 
 
 
+
+
+
+
+
+# exam based
+* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
+* 
+
+
+&nbsp;
+&nbsp;
+
+
+
 Which Google load balancing service can maintain the packet's source IP?
 
-Spinnaker must use GKE Replica Sets to trigger CD
+Partitioned Rolling Update
 
 
 
-
-## Exam
-
-Build - 
-    * PR with approval --> PR is a trigger and Approval is added on Trigger. Person with Approval access can approve trigger
-        * Cloud Build Editor role --> run build and allows to change trigger
-        * Cloud Build Approver role --> can approve the build
-    * Bin Auth with Build as Attestor
+&nbsp;
+&nbsp;
 
 
 
-How to remove PII from logs --> Fluentd filter plugin to exclude what is needed
- 
-
-Compare Canary with new deployment of current prod
-
-MOitoring viewer vs Dashboard viewer
-
-Incident Commander is to establish communication with the rest of the response team
-
-
+ASM details
