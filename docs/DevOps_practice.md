@@ -205,4 +205,68 @@ Partitioned Rolling Update
 
 
 
+
 ASM details
+
+Anthos Config Management
+  * allows platform operators to reduce security risks by defining a fully customized set of governance controls and ensuring they are consistently applied across environments
+  * gives ools they need to define, store, change, deploy, and enforce configuration and usage policies without deep Kubernetes expert skills and without having to build their own tools
+  * provides an auditable, version-controlled system for managing the fleet-wide configuration
+  * Policy Controller enables the enforcement of fully programmable policies
+  * Config Controller is a hosted service which brings you Config Connector, Config Sync, and Policy Controller for you. Config Controller lets you manage more than 180 Google Cloud resources the same way you manage other Kubernetes resources
+  * Take advantage of a Git repository to create a common configuration that can be applied 
+  * Write and apply custom rules not covered by native Kubernetes configuration objects to meet your organization’s unique security and compliance requirements
+
+  
+
+
+
+Cloud Foundation Toolkit
+    * The Cloud Foundation Toolkit provides a series of reference templates for Deployment Manager and Terraform which reflect Google Cloud best practices. These templates can be used off-the-shelf to quickly build a repeatable enterprise-ready foundation in Google Cloud.
+    * Built for enterprise
+    * Save time and resources with pre-built templates
+    * The open source templates can easily be forked and modified to suit your organization’s needs
+
+
+
+Config Connector - Config Connector is an open source Kubernetes addon that allows you to manage Google Cloud resources through Kubernetes.
+    * Config Connector provides a collection of Kubernetes Custom Resource Definitions (CRDs) and controllers
+    * you can manage existing Google Cloud resources
+    * use Kubernetes Secrets to provide sensitive data, such as passwords, to your resources
+    * The Config Connector add-on is available on only GKE Standard clusters, and not Autopilot. 
+    * It uses Workload Identity
+
+
+
+Rollback strategies - faster and better in Canary.
+
+
+
+Automating alerting policy definition using Terraform
+```
+resource "google_monitoring_alert_policy" "alert_policy" {
+  display_name = "My Alert Policy"
+  combiner     = "OR"
+  conditions {
+    display_name = "test condition"
+    condition_threshold {
+      filter     = "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""
+      duration   = "60s"
+      comparison = "COMPARISON_GT"
+      aggregations {
+        alignment_period   = "60s"
+        per_series_aligner = "ALIGN_RATE"
+      }
+      evaluation_missing_data = "EVALUATION_MISSING_DATA_INACTIVE"
+    }
+  }
+
+  user_labels = {
+    foo = "bar"
+  }
+}
+```
+
+Sustained-use discounts - Sustained Use Discounts are automatic discounts provided to GCP users for Compute Engine resources that are used for a considerable portion of the billing month, as opposed to Committed Use Discounts, which are discount options purchased for a specific term-length
+
+
