@@ -27,6 +27,15 @@ Container Analysis API: is a service that provides vulnerability scanning and me
 Binary Auth / Attestation: To secure your software supply chain, you should consider signing your container images with attestations. Runtime environments like Kubernetes Engine can validate the signature and run only the container images that you have signed/attested with Binary Auth.
 
 
+CD ArgoCD - a Kubernetes controller, responsible for continuously monitoring all running applications and comparing their live state to the desired state specified in the Git repository.
+  * follows the `GitOps` pattern of using Git repositories as the source of truth
+  * lets you connect your Git repository via HTTPS or SSH
+  * define applications based on Helm charts in your repo
+  * automatically synchronize your cluster with the desired state in Git
+
+
+
+
 &nbsp;
 &nbsp;
 
@@ -40,7 +49,7 @@ Cloud Build can send msg to the topic `cloud-build` and then pubsub can be used 
 
 Compare Canary with new deployment of current prod
 
-Spinnaker must use `GKE Replica Sets` to trigger CD
+Spinnaker must use `GKE Replica Sets` to trigger CD - and use Spinnaker to update the Replica Set for each new version of the application to be deployed 
 
 CSR - doesn't support PR based trigger. It supports only for push of branch / tag
 
@@ -81,7 +90,8 @@ firewall log is enabled at Firewall, VPC Flow logs are enabled at Subnet
 
 syslog and Event Viewer needs Log Agent installation
 
-`catch-all` config for OPS - default way to load all most used apps config
+`catch-all` config for OPS - default way to load all most used apps config - also this is MUST for OS Config as no separate agent exists
+
 
 Private Logs -- __Data Access audit logs__, except BigQuery Data Access audit logs, are the only “private logs”.
     * privateLogViewer gives access for these logs, but Log Viewer doesnt provide.
