@@ -1,9 +1,47 @@
 
+
+## Generic
+1. Balance change, velocity and reliability
+2. Manage service lifecycle
+3. Ensure healthy comms and collaboration for ops
+
+---
+
+1. Design CI CD pipelines
+2. Implement CI CD pipelines
+3. Manage Config and Sevrets
+4. Manage IaC
+5. Deploy CI CD tooling
+6. Manage diff environments
+7. Secure deployment pipeline
+
+---
+
+3. Implement service monitoring
+    * manage logs
+    * Manage metrics / Monitoring
+    * Manage Monitoring platform
+    * Manage Logging platform
+    * Implemennt Logging and Monitoring Access COntrols
+
+
+4. Optimizing service performance
+    * Debug
+    * Trace
+    * Error reporting
+    * Profiler
+
+5. Managing service Incidents
+    * Coordinate roles and comms channels
+    * Investigate IN
+    * Mitigate issue
+    * Resolve issues
+    * postmortem
+
 ## Post mortem
 
+Strcture of the Post mortem document
 ```
--- Strcture of the document --
-
 * Date
 * Authors
 * Status
@@ -45,6 +83,12 @@
 
 SRE do not set SLI (business and product decide), but SRE decides on SLI
 
+
+&nbsp;
+&nbsp;
+
+
+
 ## SLI
 
 
@@ -58,7 +102,7 @@ SRE do not set SLI (business and product decide), but SRE decides on SLI
  * Data freshness: The proportion of valid data updated more recently than a threshold
  * Data correctness: The proportion of valid data producing correct output
  * Coverage: The proportion of valid data processed successfully
- * (In))Completeness — the percentage of unexpected missing data entries, can be both on the row level and column level
+ * (In)Completeness — the percentage of unexpected missing data entries, can be both on the row level and column level
 
 
 
@@ -91,6 +135,12 @@ SLI specs
 * Which requests are included: “HTTP GETs from black-box monitoring jobs”
 * How the data is acquired: “Through our monitoring, measured at the server”
 * Data-access latency: “Time to last byte”
+
+
+&nbsp;
+&nbsp;
+
+
 
 ## SLO
 
@@ -125,16 +175,16 @@ Google Search has no SLA, but slow searches have impact on reputation and ad los
 * Automable
 * Tactical
 * no enduring value
-* Grows with service growth
+* linearly Grows with service growth
 
-SRE spend 50% time on toil
+SRE spend __50%__ time on toil
 
 > Overhead --> Administrative work not tied directly to running a service. Examples include hiring, HR paperwork, team/company meetings, bug queue hygiene, snippets, peer reviews and self-assessments, and training courses.
 
 &nbsp;
 &nbsp;
 
-Is Toil Always Bad?
+Toil is Always Bad, why -->
 * Career Stagnation
 * Low morale
 * confusion
@@ -145,11 +195,16 @@ Is Toil Always Bad?
 
 
 
+&nbsp;
+&nbsp;
+
+
+
 ## Monitoring
 
-White-box monitoring --> Monitoring based on metrics exposed by the internals of the system, including logs, interfaces like the Java Virtual Machine Profiling Interface, or an HTTP handler that emits internal statistics. (pro active - before issue occurs)
+>> White-box monitoring --> Monitoring based on metrics exposed by the internals of the system, including logs, interfaces like the Java Virtual Machine Profiling Interface, or an HTTP handler that emits internal statistics. (pro active - before issue occurs)
 
-Black-box monitoring --> Testing externally visible behavior as a user would see it. (reactive - after problem occurs)
+>> Black-box monitoring --> Testing externally visible behavior as a user would see it. (reactive - after problem occurs)
 
 
 
@@ -162,34 +217,43 @@ Why Monitor?
 
 
 The Four Golden Signals
+
 Latency 
 :  The time it takes to service a request
+
 Traffic 
 :  how much demand is being placed on your system e.g. HTTP requests per second , network I/O rate , concurrent sessions , transactions / retrievals per second
+
 Errors 
-    :  The rate of requests that fail
+:  The rate of requests that fail
+
 Saturation 
-    :  How "full" your service is e.g. memory or I/O or CPU (latency is because of saturation)
+:  How "full" your service is e.g. memory or I/O or CPU (latency is because of saturation)
+
 
 <p> how many requests did I serve that took between 0 ms and 10 ms, between 10 ms and 30 ms, between 30 ms and 100 ms, between 100 ms and 300 ms, and so on? 
 
 
 
+&nbsp;
+&nbsp;
+
+
 
 ## Best Practices for Incident Management
-* Prioritize.Stop the bleeding, restore service, and preserve the evidence for root-causing.
+* Prioritize - Stop the bleeding, restore service, and preserve the evidence for root-causing.
 
-* Prepare.Develop and document your incident management procedures in advance, in consultation with incident participants.
+* Prepare - Develop and document your incident management procedures in advance, in consultation with incident participants.
 
-* Trust.Give full autonomy within the assigned role to all incident participants.
+* Trust - Give full autonomy within the assigned role to all incident participants.
 
-* Introspect.Pay attention to your emotional state while responding to an incident. If you start to feel panicky or overwhelmed, solicit more support.
+* Introspect - Pay attention to your emotional state while responding to an incident. If you start to feel panicky or overwhelmed, solicit more support.
 
-* Consider alternatives.Periodically consider your options and re-evaluate whether it still makes sense to continue what you’re doing or whether you should be taking another tack in incident response.
+* Consider alternatives - Periodically consider your options and re-evaluate whether it still makes sense to continue what you’re doing or whether you should be taking another tack in incident response.
 
-* Practice.Use the process routinely so it becomes second nature.
+* Practice - Use the process routinely so it becomes second nature.
 
-* Change it around.Were you incident commander last time? Take on a different role this time. Encourage every team member to acquire familiarity with each role.
+* Change it around - Were you incident commander last time? Take on a different role this time. Encourage every team member to acquire familiarity with each role.
 
 
 Incident Command System
@@ -197,7 +261,7 @@ Incident Command System
 * Communicate
 * Command
 
-The OL works to respond to the incident by applying operational tools to mitigate or resolve the incident.
+The *OL* works to respond to the incident by applying operational tools to mitigate or resolve the incident.
 
-While the IC and OL work on mitigating and resolving the incident, the CL is the public face of the incident response team. If the incident becomes small enough, the CL role can be subsumed back into the IC role.
+While the IC and OL work on mitigating and resolving the incident, the *CL* is the public face of the incident response team. If the incident becomes small enough, the CL role can be subsumed back into the IC role.
 

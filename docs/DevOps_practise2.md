@@ -3,11 +3,20 @@
 
 ## Availability Table number of 9s
 
-(![Availability Matrix](images/Availability%20table.png))
+(![Availability Matrix](../images/Availability%20table.png))
 
 ## SRE Engagement model
 
-(![SRE Engagement](images/SRE_Engagement.png) )
+(![SRE Engagement](../images/SRE_Engagement.png) )
+
+
+## Load balancer decision tree
+![Alt text](../images/lb-product-tree.svg)
+
+
+&nbsp;
+&nbsp;
+
 
 
 ## Black box vs White box monitoring
@@ -24,6 +33,11 @@
 
 
 Both work together - a black box monitoring alert that tells us that our server’s CPU usage is at 100 percent. We go on to investigate this issue and see that MySQL processes are the cause of this alert. If we have white box monitoring in place to also monitor the queries running in MySQL, the amount of connections into MySQL and the amount of time it is taking for queries to run, then we have a lot more information to help diagnose the issue
+
+
+&nbsp;
+&nbsp;
+
 
 
 

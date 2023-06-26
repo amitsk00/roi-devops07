@@ -19,34 +19,45 @@ Monitoring includes:
 * Log-based metrics, which collect numeric information about the logs written to Cloud Logging
 
 
-Time series data is stored for 6 weeks
+> Time series data is stored for 6 weeks
 
+
+&nbsp;
+&nbsp;
+
+
+
+
+---
 
 ## Logging
 
 what goes to _Default and _Required
-* Logging
-    * _Default
-        * Data Access audit logs
-        * Policy Denied audit logs
 
-    * _Required
-        * Admin Activity audit logs
-        * System Event audit logs
-        * Access Transparency logs - when Google personal is accessing the data
+* _Default
+    * Data Access audit logs (ADMIN_READ , DATA_READ , DATA_WRITE )
+    * Policy Denied audit logs
 
-
-Org level sinks  
-    Called as Aggregated sink, at folder or Org level (not for project or Bill Acct as they dont have children)
-    need to create with CLI, using --org flag
-    ```
-        gcloud logging sinks create SINK_NAME
-        SINK_DESTINATION  --include-children \
-        --folder=FOLDER_ID  (OR  --organization=ORGANIZATION_ID )
-        --log-filter="LOG_FILTER"    
-    ```
+* _Required
+    * Admin Activity audit logs (ADMIN_WRITE)
+    * System Event audit logs
+    * Access Transparency logs - when __Google personal__ is accessing the data
 
 
+Org level sinks 
+* Called as Aggregated sink, at folder or Org level (not for project or Bill Acct as they dont have children)
+* need to create with CLI, using --org flag
+```
+    gcloud logging sinks create SINK_NAME
+    SINK_DESTINATION  --include-children \
+    --folder=FOLDER_ID  (OR  --organization=ORGANIZATION_ID )
+    --log-filter="LOG_FILTER"    
+```
+
+
+---
 
 ## Monitoring
 
+
+---
