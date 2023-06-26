@@ -3,7 +3,7 @@
 
 | DevOps | SRE |
 | -----  |---- |
-| Reduce Org SIlos	| Share Ownership | 
+| Reduce Org Silos	| Share Ownership | 
 | Accept failure as normal	| Blamelessness | 
 | Implement gradual change	| Reduce cost of failure | 
 | Leverage Toooling and Automation	| 	Toil automation | 
@@ -14,11 +14,11 @@
 &nbsp;
 
 ### few concepts
-`Blameless postmortem`: Detailed documentation of an incident or outage, its root cause, its impact, actions taken to resolve it, and follow-up actions to prevent its recurrence.
+`Blameless postmortem`: Detailed documentation of an incident or outage, it's root cause, it's impact, actions taken to resolve it, and follow-up actions to prevent its recurrence. But, no person who was responsible
 
-`Reliability`:` The number of “good” interactions divided by the number of total interactions. This leaves you with a numerical fraction of real users who experience a service that is available and working.
+`Reliability`: The number of “good” interactions divided by the number of total interactions. This leaves you with a numerical fraction of real users who experience a service that is available and working.
 
-`Error budget`: The amount of unreliability you are willing to tolerate.
+`Error budget`: The amount of unreliability you are willing to tolerate. ( 100% - SLO% )
 
 `Service level indicator (SLI)`: A quantifiable measure of the reliability of your service from your users' perspective.
 
@@ -35,7 +35,7 @@
 * Design thinking methodology has five phases: empathize, define, ideate, prototype, and test.
 * Prototyping culture encourages teams to try more ideas, leading to an increase in faster failures and more successes.
 * Excessive toil is toxic to the SRE role.
-By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add * service features.
+* By eliminating toil, SREs can focus the majority of their time on work that will either reduce future toil or add  service features.
 * Resistance to change is usually a fear of loss.
 * Present change as an opportunity, not a threat.
 * People react to change in many ways, and IT leaders need to understand how to communicate with and support each group.
@@ -52,7 +52,8 @@ By eliminating toil, SREs can focus the majority of their time on work that will
 
 &nbsp;
 &nbsp;
-### HOw SLI should be
+
+### How SLI should be
 1. Measure reliability with good service level indicators (SLIs).
 2. A good SLI correlates with user experience with your service; that is, a good SLI tells you when users are happy or unhappy.
 3. Measure toil by identifying it, selecting an appropriate unit of measure, and tracking the measurements continuously.
@@ -64,6 +65,7 @@ By eliminating toil, SREs can focus the majority of their time on work that will
 
 &nbsp;
 &nbsp;
+
 ### How SRE and Dev teams can work together
 1. Kitchen Sink/”Everything SRE” team: We recommend this approach for organizations that have few applications and user journeys and where the scope is small enough that only one team is necessary, but a dedicated SRE team is needed in order to implement its practices.
 2. Infrastructure team: This type of team focuses on maintaining shared services and components related to infrastructure, versus an SRE team dedicated to working on services related to products, like customer-facing code.
@@ -75,6 +77,7 @@ By eliminating toil, SREs can focus the majority of their time on work that will
 
 &nbsp;
 &nbsp;
+
 ### Developing a Google SRE Cultures
 1. Organizations with high SRE maturity have well-documented and user-centric SLOs, error budgets, blameless postmortem culture, and a low tolerance for toil.
 2. Engineers with operations experience and systems administrators with scripting experience are good first SREs to hire.
@@ -87,7 +90,8 @@ By eliminating toil, SREs can focus the majority of their time on work that will
 
 &nbsp;
 &nbsp;
-=====================================================
+
+---
 
 ### Moonbank project details (expired)
 
@@ -95,10 +99,10 @@ By eliminating toil, SREs can focus the majority of their time on work that will
 
 > ROI2023dev
 
-WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
+> WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-cloud-flash-cards/
 
 
-=====================================================
+---
 
 
 
@@ -107,13 +111,13 @@ WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-clo
 &nbsp;
 
 
-* Cloud billing user
-    * Billing Account Creator - Create new  billing accounts.
-    * Billing Account Administrator - everything
-    * Billing Account Costs Manager - Manage budgets and view and export cost information of billing accounts (but not pricing information).
-    * Billing Account Viewer - View billing account cost information and transactions.
-    * Billing Account User - Link projects to billing accounts.
-    * Project Billing Manager - Link/unlink the project to/from a billing account.
+Cloud billing user
+* Billing Account Creator - Create new  billing accounts.
+* Billing Account Administrator - everything
+* Billing Account Costs Manager - Manage budgets and view and export cost information of billing accounts (but not pricing information).
+* Billing Account Viewer - View billing account cost information and transactions.
+* Billing Account User - Link projects to billing accounts.
+* Project Billing Manager - Link/unlink the project to/from a billing account.
 
 &nbsp;
 &nbsp;
@@ -134,14 +138,14 @@ WhizLabs - https://quizlet.com/563208858/sre-and-devops-engineer-with-google-clo
     * Anthos clusters
 * `Continuous Validation` (CV) is a feature of Binary Authorization that periodically checks container images associated with running Pods for continued policy conformance.
 * `Container Analysis` stores trusted metadata that is used in the authorization process.
-    * For each attestor you create, you must create one Container Analysis note. 
+    * For each attestor you create, you must create one Container Analysis *note*. 
     * Each attestation is stored as an occurrence of this note.
 * Binary Authorization is based on the `Kritis` specification, which is part of the `Grafeas` open source project.
 * An *attestation* certifies that a specific image has completed a previous stage
-    * ~Build verification~ in which Binary Authorization uses attestations to verify that an image was built by a specific build system or continuous integration (CI) pipeline.
-    * ~Vulnerability scanning~ where the CI-built image has also been scanned for vulnerabilities by Container Analysis.
-    * ~Manual check~ where a person, for example, a QA representative, manually creates the attestation.
-* Binary authorization linked to COntainer analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
+    * `Build verification` in which Binary Authorization uses attestations to verify that an image was built by a specific build system or continuous integration (CI) pipeline.
+    * `Vulnerability scanning` where the CI-built image has also been scanned for vulnerabilities by Container Analysis.
+    * `Manual check` where a person, for example, a QA representative, manually creates the attestation.
+* Binary authorization linked to Container analysis - Each PGP key is associated with an “attestation note” which is stored in the Container Analysis API. Container Analysis can sign the attestation, verifying the integrity and security of the container image.
 
 
 Binary Authorization provides:
@@ -155,17 +159,17 @@ Policies will have
 * Deployment rules
 * List of exempt images
 
-Each Google Cloud project can have exactly one policy.
+> Each Google Cloud project can have exactly one policy.
 
 three evaluation modes:
-    * Allow all images: allows all images to be deployed.
-    * Disallow all images: disallows all images from being deployed.
-    * Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
+* Allow all images: allows all images to be deployed.
+* Disallow all images: disallows all images from being deployed.
+* Require attestations: requires a signer to digitally sign the image digest and create an attestation before deployment. 
 
 
 Enforcement modes
-    * Block and Audit Log:
-    * Dry Run: Audit Log Only:
+* Block and Audit Log:
+* Dry Run: Audit Log Only:
 
 
 Extra features 
@@ -184,22 +188,6 @@ Binary Authorization supports two types of keys:
 
 
 
-# exam based
-* cloud endpoints - for API and for AE, proxy is deployed auto, uses JWT and LMAO.
-* 
-
-
-&nbsp;
-&nbsp;
-
-
-
-Which Google load balancing service can maintain the packet's source IP?
-
-Partitioned Rolling Update
-
-
-
 &nbsp;
 &nbsp;
 
@@ -210,35 +198,33 @@ ASM details
 
 Anthos Config Management
   * allows platform operators to reduce security risks by defining a fully customized set of governance controls and ensuring they are consistently applied across environments
-  * gives ools they need to define, store, change, deploy, and enforce configuration and usage policies without deep Kubernetes expert skills and without having to build their own tools
-  * provides an auditable, version-controlled system for managing the fleet-wide configuration
-  * Policy Controller enables the enforcement of fully programmable policies
-  * Config Controller is a hosted service which brings you Config Connector, Config Sync, and Policy Controller for you. Config Controller lets you manage more than 180 Google Cloud resources the same way you manage other Kubernetes resources
+  * gives tools they need to define, store, change, deploy, and enforce configuration and usage policies without deep Kubernetes expert skills and without having to build their own tools
+  * provides an *auditable*, _version-controlled_ system for managing the fleet-wide configuration
+  * `Policy Controller` enables the enforcement of fully programmable policies
+  * `Config Controller` is a hosted service which brings you **Config Connector**, **Config Sync**, and **Policy Controller** for you. Config Controller lets you manage more than 180 Google Cloud resources the same way you manage other Kubernetes resources
   * Take advantage of a Git repository to create a common configuration that can be applied 
   * Write and apply custom rules not covered by native Kubernetes configuration objects to meet your organization’s unique security and compliance requirements
 
   
-
+---
 
 
 Cloud Foundation Toolkit
-    * The Cloud Foundation Toolkit provides a series of reference templates for Deployment Manager and Terraform which reflect Google Cloud best practices. These templates can be used off-the-shelf to quickly build a repeatable enterprise-ready foundation in Google Cloud.
-    * Built for enterprise
-    * Save time and resources with pre-built templates
-    * The open source templates can easily be forked and modified to suit your organization’s needs
+* The Cloud Foundation Toolkit provides a series of **reference templates** for Deployment Manager and Terraform which reflect Google Cloud best practices. These templates can be used off-the-shelf to quickly build a repeatable enterprise-ready foundation in Google Cloud.
+* Built for enterprise
+* Save time and resources with pre-built templates
+* The open source templates can easily be forked and modified to suit your organization’s needs
 
-
+---
 
 Config Connector - Config Connector is an open source Kubernetes addon that allows you to manage Google Cloud resources through Kubernetes.
-    * Config Connector provides a collection of Kubernetes Custom Resource Definitions (CRDs) and controllers
+    * Config Connector provides a collection of Kubernetes *Custom Resource Definitions (CRDs)* and *controllers*
     * you can manage existing Google Cloud resources
     * use Kubernetes Secrets to provide sensitive data, such as passwords, to your resources
-    * The Config Connector add-on is available on only GKE Standard clusters, and not Autopilot. 
+    * The Config Connector add-on is available on **only GKE Standard clusters**, and not Autopilot. 
     * It uses Workload Identity
 
 
-
-Rollback strategies - faster and better in Canary.
 
 
 
@@ -266,7 +252,5 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   }
 }
 ```
-
-Sustained-use discounts - Sustained Use Discounts are automatic discounts provided to GCP users for Compute Engine resources that are used for a considerable portion of the billing month, as opposed to Committed Use Discounts, which are discount options purchased for a specific term-length
 
 

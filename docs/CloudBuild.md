@@ -26,7 +26,7 @@ Build-packs
 Community Builders
 ```
     git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
-    cd cloud-builders-community/builder-name
+    cd cloud-builders-community/${builder-name}
     gcloud builds submit .
 
     steps:
@@ -132,29 +132,32 @@ Run Docker image
 Build and Python
 ```
     steps:
-       - name: python
-          entrypoint: python
-          args: ["-m", "pip", "install", "--upgrade", "pip"]     
-       - name: python
-          entrypoint: python
-          args: ["-m", "pip", "install", "build", "pytest", "Flask", "--user"]
+    - name: python
+      entrypoint: python
+      args: ["-m", "pip", "install", "--upgrade", "pip"]     
+    - name: python
+      entrypoint: python
+      args: ["-m", "pip", "install", "build", "pytest", "Flask", "--user"]
 ```
 
 non container (python) artifacts
 ```
     artifacts:
-       python_packages:
-       - repository: "https://LOCATION-python.pkg.dev/PROJECT-ID/REPOSITORY"
-          paths: ["dist/*"]
+      python_packages:
+      - repository: "https://LOCATION-python.pkg.dev/PROJECT-ID/REPOSITORY"
+        paths: ["dist/*"]
 ```
+---
 
-~Python~ requirements
+*Python* requirements
 ```
 twine
 keyrings.google-artifactregistry-auth
 ```
 1. Twine : is for uploading packages to Artifact Registry.
 2. keyrings.google-artifactregistry-auth : is the Artifact Registry keyring backend that handles authentication with Artifact Registry for pip and Twine.
+
+---
 
 Java artifacts in Build
 ```
@@ -166,6 +169,7 @@ Java artifacts in Build
         groupId: 'group-id'
         version: 'version'
 ```
+---
 
 Using GCS for logs
 ```
@@ -186,7 +190,7 @@ and
         paths: ['HelloWorld.java', 'HelloWorld.class', 'cloudbuild.yaml']
 ```
 
-CReating Triggers for CSR
+Creating Triggers for CSR
 ```
     gcloud beta builds triggers create cloud-source-repositories \
     --repo=REPO_NAME \
@@ -195,7 +199,7 @@ CReating Triggers for CSR
     --service-account=SERVICE_ACCOUNT \
     --require-approval
 ```
-But to *skip* to run this trigger -  you can include `[skip ci]` or `[ci skip]` in the commit message, and a build will not be triggered.
+> But to *skip* to run this trigger -  you can include `[skip ci]` or `[ci skip]` in the commit message, and a build will not be triggered.
  
  
 
@@ -352,7 +356,7 @@ options:
 
 ```
 
-Caching of docker images (default caching time is 6h )
+Caching of docker images (**default caching time is 6h** )
 ```
 steps:
 - name: 'gcr.io/cloud-builders/docker'
@@ -368,7 +372,7 @@ steps:
 images: ['gcr.io/$PROJECT_ID/[IMAGE_NAME]:latest']
 ```
 
-Kaniko cache (default caching time is 2w )
+Kaniko cache (**default caching time is 2w** )
 ```
 steps:
 - name: 'gcr.io/kaniko-project/executor:latest'
@@ -389,26 +393,27 @@ steps:
 6. Avoiding the upload of unnecessary files (use .gcloudignore)
 
 
+---
 
 ### can we run cloud build across multiple projects ?
-    In SA project, iam.disableCrossProjectServiceAccountUsage should be OFF
-    In SA project, iam.serviceAccountTokenCreator role should be given to SA (on Build SAgent on BUILD Project)
-    in SA project,  Service Account User is also needed
-    In this case, logs can't be stored in default log bucket, rather use Cloud Logging (Logs Writer role needed) or user def GCS bucket
-    on Articat Registry, need role of  Artifact Registry Create-on-push Writer
-    Storage Admin on GCS
-    Storage Object Admin on GCS
-    Add SA entry in cloudbuilds.yaml
+* In SA project, iam.disableCrossProjectServiceAccountUsage should be OFF
+* In SA project, iam.serviceAccountTokenCreator role should be given to SA (on Build SAgent on BUILD Project)
+* in SA project, Service Account User is also needed
+> In this case, logs can't be stored in default log bucket, rather use Cloud Logging (Logs Writer role needed) or user  def GCS bucket
+* on Articat Registry, need role of  Artifact Registry Create-on-push Writer
+* Storage Admin on GCS
+* Storage Object Admin on GCS
+* Add SA entry in cloudbuilds.yaml
 
-    ```
-        steps:
-        - name: 'bash'
-        args: ['echo', 'Hello world!']
-        logsBucket: 'LOGS_BUCKET_LOCATION'
-        serviceAccount: 'projects/PROJECT_ID/serviceAccounts/SERVICE_ACCOUNT'
-        options:
-        logging: GCS_ONLY
-    ```
+```
+    steps:
+    - name: 'bash'
+    args: ['echo', 'Hello world!']
+    logsBucket: 'LOGS_BUCKET_LOCATION'
+    serviceAccount: 'projects/PROJECT_ID/serviceAccounts/SERVICE_ACCOUNT'
+    options:
+    logging: GCS_ONLY
+```
 
 
 
