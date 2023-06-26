@@ -242,18 +242,24 @@ Skaffold -
 ## Check in lab / console
 
 1. check MIG
-    1. Region or multi regional
-    2. zonal ?
+    1. Region or multi regional - MIG is zonal or regional.
+    2. zonal - multiple instances in same zone or split in mult zones of a single region
 
 2. GKE
     1. Bin Auth
     2. Workload logging
-    3. regional cluster?
+    3. regional cluster - zonal or regional.
     4. multi regional cluster
 
 3. Alerting?
-    1. can we alert from SLI?
-    2. can we alert from SLO?
+    1. can we alert from SLI? --> SLI to SLO to Alerting
+    2. can we alert from SLO? --> SLO to alerting is possible
+
+4. Monitoring
+  1. Workspaces - where to find now?
+
+5. Logging
+  1. can Editor create sincs?
 
 
 
